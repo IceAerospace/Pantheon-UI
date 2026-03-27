@@ -1,0 +1,38 @@
+.container {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  margin: 6px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  background: var(--color-code-header);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lang {
+  font-size: var(--font-size-xs);
+  font-family: "Fira Code", monospace;
+  color: var(--color-text-secondary);
+  text-transform: lowercase;
+}
+
+.copyBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-size-xs);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.copyBtn:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text);
+}

@@ -1,0 +1,36 @@
+[package]
+name = "pantheon-ui"
+version = "0.1.0"
+description = "Pantheon UI - Desktop application for PantheonOS"
+authors = ["IceAerospace"]
+license = "MIT"
+repository = "https://github.com/IceAerospace/Pantheon-UI"
+default-run = "pantheon-ui"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "pantheon_ui_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "pantheon-ui"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2.0.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0", features = ["tray-icon", "image-ico", "image-png"] }
+tauri-plugin-store = "2.0.0"
+tauri-plugin-shell = "2.0.0"
+tauri-plugin-dialog = "2.0.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
