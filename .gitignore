@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ts-node/
+src-tauri/target/
+
+# Tauri generated
+src-tauri/gen/
+
+# Misc
+.DS_Store
+*.local
+*.log
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Tauri store files (runtime data)
+*.dat
